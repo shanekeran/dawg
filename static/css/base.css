@@ -26,27 +26,6 @@ body {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
 .text-black {
     color: #000 !important;
 }
@@ -68,6 +47,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#home-center-div i{
+    font-size: 35px;
+    border: 1px solid #414141;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: #1da258;
 }
 
 /* -------------------------------- Media Queries */

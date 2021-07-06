@@ -3,8 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/dogg.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #F37A4D;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
@@ -60,6 +59,17 @@ body {
     background: #000 !important;
 }
 
+#home-logo{
+    width: auto;
+    height: 50vh;
+}
+
+#home-center-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -67,19 +77,4 @@ body {
   .container {
     max-width: 80%;
   }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
 }

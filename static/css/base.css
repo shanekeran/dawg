@@ -19,7 +19,7 @@ body {
 }
 
 .logo-font {
-    text-transform: uppercase;
+    font-family: 'shrikhand';
 }
 
 .main-logo-link {

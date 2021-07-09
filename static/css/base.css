@@ -9,6 +9,10 @@ body {
     font-family: 'Lato';
 }
 
+header{
+  background-color: #F37A4D;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -37,6 +41,8 @@ body {
 .bg-black {
     background: #000 !important;
 }
+
+/* Home Page */
 
 #home-logo{
     width: auto;
@@ -133,6 +139,18 @@ body {
   .hvr-skew-forward:hover, .hvr-skew-forward:focus, .hvr-skew-forward:active {
     -webkit-transform: skew(-10deg);
     transform: skew(-10deg);
+  }
+
+  /* Product Page */
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
   }
   
 

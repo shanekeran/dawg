@@ -55,12 +55,8 @@ header{
     align-items: center;
 }
 
-#home-center-div i{
-    font-size: 35px;
-    border: 1px solid #414141;
-    border-radius: 50px;
-    padding: 10px;
-    background-color: #009933;
+.home-icons{
+    width: 12vw;
 }
 
 /* Grow Rotate - hover.css by Ian Lunn */

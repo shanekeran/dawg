@@ -148,7 +148,19 @@ header{
     background: white;
     z-index: -1;
   }
-  
+
+  .card-body{
+    flex: 0 1 auto!important;
+  }
+
+  .card>a{
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .card-img-top{
+    margin: auto;
+  }
 
 /* -------------------------------- Media Queries */
 

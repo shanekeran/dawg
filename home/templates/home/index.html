@@ -19,19 +19,23 @@
     <div class="container h-100">
         <div class="row h-100">
             <div class="col-12 my-auto" id="home-center-div">
-                    <img src="../media/dawg.png" alt="Dawg logo" id="home-logo" class="hvr-grow-rotate">
+                    <!-- Main Dawg Logo -->
+                    <a href="{% url 'products' %}">
+                        <img src="../media/dawg.png" alt="Dawg logo" id="home-logo" class="hvr-grow-rotate">
+                    </a>
+                    <!-- Product category icons / links -->
                     <div class="my-5 row">
                         <div class="col-6 col-md-3 hvr-float-shadow">
-                            <a href="{% url 'products' %}" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/collar.png" alt="Collar and Leash" class="home-icons"></a>
+                            <a href="{% url 'products' %}?category=collars_and_leads" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/collar.png" alt="Collar and Leash" class="home-icons"></a>
                         </div>
                         <div class="col-6 col-md-3 hvr-float-shadow">
-                            <a href="" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/food.png" alt="Collar and Leash" class="home-icons"></a>
+                            <a href="{% url 'products' %}?category=food" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/food.png" alt="Dog Food" class="home-icons"></a>
                         </div>
                         <div class="col-6 col-md-3 hvr-float-shadow">
-                            <a href="" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/bed.png" alt="Collar and Leash" class="home-icons"></a>
+                            <a href="{% url 'products' %}?category=beds" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/bed.png" alt="Dog Bed" class="home-icons"></a>
                         </div>
                         <div class="col-6 col-md-3 hvr-float-shadow">
-                            <a href="" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/toys.png" alt="Collar and Leash" class="home-icons"></a>
+                            <a href="{% url 'products' %}?category=toys" class=" btn btn-sm rounded-0 text-uppercase py-3"><img src="../media/toys.png" alt="Toys" class="home-icons"></a>
                         </div>
                     </div>
             </div>

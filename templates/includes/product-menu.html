@@ -1,49 +1,60 @@
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mx-auto">
+    <ul class="navbar-nav">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="essentials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Home Essentials
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="essentials-link">
-                <a href="" class="dropdown-item">Dog beds & Kennels</a>
-                <a href="" class="dropdown-item">Food & Drink</a>
-                <a href="" class="dropdown-item">Toys and treats</a>
-                <a href="" class="dropdown-item">All Essential products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="walking-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Outdoors
+                Walking
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="walking-link">
-                <a href="" class="dropdown-item">Collars & Name tags</a>
-                <a href="" class="dropdown-item">Leads, muzzels & Harnesses</a>
-                <a href="" class="dropdown-item">All Walking products</a>
+                <a href="{% url 'products' %}?category=collars" class="dropdown-item">Collars</a>
+                <a href="{% url 'products' %}?category=leads" class="dropdown-item">Leads</a>
+                <a href="{% url 'products' %}?category=harnesses" class="dropdown-item">Harnesses</a>
+                <a href="{% url 'products' %}?category=collars,leads,harnesses" class="dropdown-item">All Walking Accessories</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="food-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Food & Treats
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+            <div class="dropdown-menu border-0" aria-labelledby="food-link">
+                <a href="{% url 'products' %}?category=food" class="dropdown-item">Food</a>
+                <a href="{% url 'products' %}?category=treats" class="dropdown-item">Treats</a>
+                <a href="{% url 'products' %}?category=bowls" class="dropdown-item">Bowls</a>
+                <a href="{% url 'products' %}?category=food,treats,bowls" class="dropdown-item">All Food products</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="beds-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Beds
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="beds-link">
+                <a href="{% url 'products' %}?category=beds" class="dropdown-item">Indoor</a>
+                <a href="{% url 'products' %}?category=kennels" class="dropdown-item">Outdoor</a>
+                <a href="{% url 'products' %}?category=blankets" class="dropdown-item">Blankets</a>
+                <a href="{% url 'products' %}?category=beds,kennels,blankets" class="dropdown-item">All Beds</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="toys-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Toys
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="toys-link">
+                <a href="{% url 'products' %}?category=balls" class="dropdown-item">Tennis balls</a>
+                <a href="{% url 'products' %}?category=squeaky" class="dropdown-item">Squeaky</a>
+                <a href="{% url 'products' %}?category=toys,balls,squeaky" class="dropdown-item">All Toys</a>
             </div>
         </li>
     </ul>

@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ugyw5krl9^cq*p)m11)cqcr%a5-j!u*44!7xtb5&z5aj@7p=$2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shanekeran-dawg.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -118,12 +118,17 @@ WSGI_APPLICATION = 'dawg.wsgi.application'
 else use the default Django sqlite3 setup.
 """
 
-DATABASES = {
-    'default': {
-    'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

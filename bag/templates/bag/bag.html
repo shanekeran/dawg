@@ -2,10 +2,6 @@
 {% load static %}
 {% load bag_tools %}
 
-{% block navigation %}
-    {% include './secondary-nav.html' %}
-{% endblock %}
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -143,7 +139,6 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
         var url = `/bag/remove/${itemId}`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
 

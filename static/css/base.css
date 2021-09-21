@@ -59,6 +59,10 @@ header{
     width: 12vw;
 }
 
+#delivery-banner {
+  background-color: #303030;
+}
+
 /* Grow Rotate - hover.css by Ian Lunn */
 .hvr-grow-rotate {
     display: inline-block;
@@ -305,8 +309,12 @@ color: #fff;
   border-color: #222;
 }
 
-.allauth-form-inner-content a {
-color: #17a2b8; /* text-info */
+#topnav > div > ul > li > a {
+color: rgb(0, 0, 0)!important;
+}
+
+#topnav > div > ul > li > a:hover {
+color: #fff!important;
 }
 
 /* Product Form */

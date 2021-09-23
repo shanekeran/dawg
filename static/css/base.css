@@ -60,6 +60,16 @@ header{
     align-items: center;
 }
 
+.home-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-links > span{
+  font-size: 12px;
+}
+
 .home-icons{
     width: 20vw;
 }
@@ -364,6 +374,10 @@ color: #fff!important;
   .home-icons{
     width: 13vw;
   }
+
+  .home-links > span{
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -410,6 +424,14 @@ color: #fff!important;
 
 @media (max-width: 576px) {
   .home-icons{
-    width: 35vw;
+    width: 30vw;
+  }
+
+  #home-logo{
+    height: 40vh;
+  }
+
+  .home-links > span{
+    font-size: 10px;
   }
 }

@@ -42,13 +42,12 @@
   </head>
   <body>
     <header class="container-fluid">
-      <!-- Top navigation bar -->
       {% block navigation %}
         <!-- Top navigation bar -->
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-              <h2 class="logo-font text-black my-0">Dawg</h2>
+              <h2 class="logo-font my-0">Dawg</h2>
             </a>
           </div>
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -89,10 +88,23 @@
                         {% endif %}
                     </div>
                 </li>
+                <li class="list-inline-item dropdown">
+                  <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <div class="text-center">
+                          <div><i class="fas fa-info-circle fa-lg"></i></div>
+                          <p class="my-0">About</p>
+                      </div>
+                  </a>
+                  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                      <a href="{% url 'locations' %}" class="dropdown-item">Locations</a>
+                      <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
+                  </div>
+                </li>
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
                                     €{{ grand_total|floatformat:2 }}
@@ -118,7 +130,7 @@
         </div>
         <div id="delivery-banner" class="row text-center">
           <div class="col text-white">
-              <h4 class="logo-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>                
+              <h4 class="my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>                
           </div>            
         </div>
       {% endblock %}

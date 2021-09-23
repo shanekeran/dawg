@@ -44,13 +44,13 @@
     <header class="container-fluid">
       {% block navigation %}
         <!-- Top navigation bar -->
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row pt-md-2 d-none d-md-flex">
+          <div class="col-12 col-md-4 my-auto py-1 py-lg-0 text-center text-md-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
               <h2 class="logo-font my-0">Dawg</h2>
             </a>
           </div>
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <div class="col-12 col-md-4 my-auto py-1 py-md-0">
             <!-- Search bar -->
             <form method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
@@ -66,12 +66,12 @@
             </form>
             <!-- End of Search bar-->
           </div>
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-            <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <div class="col-12 col-md-4 my-auto py-1 py-md-0">
+            <ul class="list-inline list-unstyled text-center text-md-right my-0">
                 <li class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
-                            <div><i class="fas fa-user fa-lg"></i></div>
+                            <div><i class="fas fa-dog fa-2x"></i></div>
                             <p class="my-0">My Account</p>
                         </div>
                     </a>
@@ -92,7 +92,7 @@
                   <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false">
                       <div class="text-center">
-                          <div><i class="fas fa-info-circle fa-lg"></i></div>
+                          <div><i class="fas fa-info-circle fa-2x"></i></div>
                           <p class="my-0">About</p>
                       </div>
                   </a>
@@ -104,7 +104,7 @@
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                            <div><i class="fas fa-shopping-cart fa-2x"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
                                     €{{ grand_total|floatformat:2 }}
@@ -120,7 +120,7 @@
         </div>
         <!-- Lower navigation bar-->
         <div class="row">
-          <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <nav class="navbar navbar-expand-md navbar-light w-100">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

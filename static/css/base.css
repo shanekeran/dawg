@@ -206,6 +206,12 @@ input[name='q']::placeholder {
   color: #aab7c4;
 }
 
+/* Product detail */
+
+.btn-orange {
+  background-color: #F37A4D;
+}
+
 /* Toasts */
 
 .message-container {
@@ -220,7 +226,7 @@ input[name='q']::placeholder {
 }
 
 .toast-capper {
-  height: 2px;
+  height: 5px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */

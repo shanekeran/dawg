@@ -211,6 +211,12 @@ input[name='q']::placeholder {
   color: #aab7c4;
 }
 
+/* Locations */
+
+.city{
+  font-size: 26px;
+}
+
 /* Toasts */
 
 .message-container {

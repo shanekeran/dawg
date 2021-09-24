@@ -47,6 +47,11 @@ header{
     background: #000 !important;
 }
 
+.btn-orange {
+  background-color: #F37A4D!important;
+  color: black;
+}
+
 /* Home Page */
 
 #home-logo{
@@ -204,12 +209,6 @@ header{
 
 input[name='q']::placeholder {
   color: #aab7c4;
-}
-
-/* Product detail */
-
-.btn-orange {
-  background-color: #F37A4D;
 }
 
 /* Toasts */

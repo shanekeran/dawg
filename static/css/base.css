@@ -217,6 +217,13 @@ input[name='q']::placeholder {
   font-size: 26px;
 }
 
+/* Bag */
+
+.img-fluid{
+  max-height: 30vh;
+  min-height: 100px;
+}
+
 /* Toasts */
 
 .message-container {

@@ -52,6 +52,10 @@ header{
   color: black;
 }
 
+.btn:focus {
+  box-shadow: none!important;
+}
+
 /* Home Page */
 
 #home-logo{

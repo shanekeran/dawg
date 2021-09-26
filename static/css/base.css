@@ -217,6 +217,10 @@ input[name='q']::placeholder {
   font-size: 26px;
 }
 
+.card.flex-row-reverse{
+  box-shadow: 4px 4px 8px 0px #545454b0;
+}
+
 /* Bag */
 
 .img-fluid{
@@ -395,6 +399,12 @@ color: #fff!important;
 
   .home-links > span{
     font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown-menu{
+    background-color: #F37A4D;
   }
 }
 

@@ -25,17 +25,26 @@
         <div class="row">
             {% for location in locations %}
                 <div class="col-12 py-2">
-                    {% if forloop.counter == 2 or forloop.counter == 4 %}
-                    <div class="card flex-row h-100 py-5">
+                    {% if forloop.counter|divisibleby:2 %}
+                    <div class="card flex-row h-100 py-5 border-0 justify-content-start">
                     {% else %}
-                    <div class="card flex-row-reverse h-100 py-5">
+                    <div class="card flex-row-reverse h-100 py-5 border-0 justify-content-start">
                     {% endif %}
-                        <div class="col-4 my-auto text-center"><i class="fas fa-store-alt fa-3x"></i></div>
+                        <div class="col-2 my-auto text-center"><i class="fas fa-store-alt fa-3x"></i></div>
                         <div class="col-6">
-                            <div class="row city">{{ location.city }}</div>
-                            <div class="row">Find us at: {{ location.address }}</div>
-                            <div class="row">Phone number: {{ location.phone_number }}</div>
-                            <div class="row">Opening hours: {{ location.opening_hours }}</div>
+                            <div class="row city justify-content-center">{{ location.city }}</div>
+                            <div class="row justify-content-center">
+                                <strong>Find us at:</strong>
+                                <span class="pl-2">{{ location.address }}</span>
+                            </div>
+                            <div class="row justify-content-center">
+                                <strong>Phone number:</strong>
+                                <span class="pl-2">{{ location.phone_number }}</span>
+                            </div>
+                            <div class="row justify-content-center">
+                                <strong>Opening hours:</strong>
+                                <span class="pl-2">{{ location.opening_hours }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>                       

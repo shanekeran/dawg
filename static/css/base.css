@@ -221,9 +221,14 @@ input[name='q']::placeholder {
   box-shadow: 4px 4px 8px 0px #545454b0;
 }
 
+.flex-row-reverse img{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 /* Bag */
 
-.img-fluid{
+.img-fluid.rounded{
   max-height: 30vh;
   min-height: 100px;
 }
@@ -434,17 +439,6 @@ color: #fff!important;
       font-size: .9rem;
   }
 
-  .btn.btn-outline-black.rounded-0,
-  .btn.btn-black.rounded-0 {
-      padding: .375rem .375rem;
-  }
-
-  .btn.btn-outline-black.rounded-0.btn-lg,
-  .btn.btn-black.rounded-0.btn-lg {
-      padding: .375rem .375rem;
-      font-size: .75rem;
-  }
-
   .increment-qty, .decrement-qty {
       padding: .25rem .5rem !important;
   }
@@ -461,5 +455,13 @@ color: #fff!important;
 
   .home-links > span{
     font-size: 10px;
+  }
+
+  .location-info{
+    font-size: 10px;
+  }
+
+  .city{
+    font-size: 18px;
   }
 }

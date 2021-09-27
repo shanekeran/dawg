@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block navigation %}
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 my-auto" id="home-center-div">
+                    <!-- Main Dawg Logo -->
+                    <a href="{% url 'products' %}">
+                        <img src="{{ MEDIA_URL }}dawg.png" alt="Dawg logo" id="home-logo" class="hvr-grow-rotate">
+                    </a>
+                    <!-- Return to product page link -->
+                    <div class="my-2 row flex-column text-center justify-content-center">
+                        <h1>Error:404<br>Who let the dogs out?</h1>
+                        <a href="{% url 'products' %}" class="text-black border-black bg-white p-1">Click here to return to our store.</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

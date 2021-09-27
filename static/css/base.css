@@ -52,6 +52,10 @@ header{
   box-shadow: none!important;
 }
 
+button:focus {
+  outline: none!important;
+}
+
 .dropdown-menu.show{
   left: -65px; /*Fixes issue with dropdown menu overflowing container */
 }
@@ -436,11 +440,6 @@ color: #fff!important;
   }
 
   .nav-link i.fa-lg {
-      font-size: 1rem;
-  }
-
-  .navbar-toggler {
-      padding: .6rem .6rem;
       font-size: 1rem;
   }
 

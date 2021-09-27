@@ -43,10 +43,6 @@ header{
     border: 1px solid black !important;
 }
 
-.bg-black {
-    background: #000 !important;
-}
-
 .btn-orange {
   background-color: #F37A4D!important;
   color: black;
@@ -54,6 +50,15 @@ header{
 
 .btn:focus {
   box-shadow: none!important;
+}
+
+.dropdown-menu.show{
+  left: -65px; /*Fixes issue with dropdown menu overflowing container */
+}
+
+#mobile-search-bar{
+  left: 0px!important;
+  background-color: #F37A4D;
 }
 
 /* Home Page */
@@ -412,7 +417,7 @@ color: #fff!important;
 }
 
 @media (max-width: 767px) {
-  .dropdown-menu{
+  .nav-item>.dropdown-menu{
     background-color: #F37A4D;
   }
 }

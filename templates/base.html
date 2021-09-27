@@ -75,7 +75,7 @@
                             <p class="my-0">My Account</p>
                         </div>
                     </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                    <div class="dropdown-menu border-black" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -96,7 +96,7 @@
                           <p class="my-0">About</p>
                       </div>
                   </a>
-                  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  <div class="dropdown-menu border-black" aria-labelledby="user-options">
                       <a href="{% url 'locations' %}" class="dropdown-item">Locations</a>
                       <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
                   </div>

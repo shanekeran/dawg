@@ -226,8 +226,8 @@ input[name='q']::placeholder {
 }
 
 .flex-row-reverse img{
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1); /* Flips kennel icon image */
+  transform: scaleX(-1); /* Source: https://www.w3schools.com/howto/howto_css_flip_image.asp */
 }
 
 /* Bag */

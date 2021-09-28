@@ -4,6 +4,9 @@ from django.shortcuts import render
 
 def index(request):
     """A view to return the index page"""
-    
-    return render(request, 'home/index.html')
+    template = 'home/index.html'
+    context = {
+        'non_product_page': True,
+    }
+    return render(request, template, context)
 

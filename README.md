@@ -79,29 +79,24 @@ Dawg is a multi-page website, with certain pages only accessible to users that a
 
 3. Bag
 
-    
+    The bag app gives the user the ability to view and update product quantities. It displays the unit price of each product, the delivery fee and the grand total cost of the order. If the order is below €30, a message will display letting the user know how much more they need to spend to avail of free delivery.
 
 4. Checkout
 
-    
+    Users can fill out delivery and credit card details to make an order. Users with an account have the option to save the delivery information to their profile to make future orders easier. Users not currently logged in will be requested to login or create an account to save this information. A confirmation email is sent to the user after a payment is confirmed and an order is created.
 
-5. Login / Register
+5. Profile (Logged In users only)
 
-    
+    The profile page allows users to add/update their contact and delivery information. It also displays their Order History, which links to each individual order confirmation page giving full details for each past order placed with Dawg.
 
-6. Profile (Logged In users only)
+6. Locations
 
-    
-
-7. Product Management (Super users only)
+    The locations page lists the various dawg stores throughout Ireland. It provides basic details such as phone number, address and opening hours.
 
 
-8. Locations
+7. Contact Us
 
-
-
-9. Contact Us
-
+    The Contact Us page offers the user the option to reach out directly to Dawg. On submission of the form, a message is displayed to the user that their message was received.
     
 
 

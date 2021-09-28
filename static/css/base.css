@@ -92,8 +92,15 @@ button:focus {
     width: 20vw;
 }
 
-#delivery-banner {
-  background-color: #303030;
+#delivery-banner > div {
+  background-color: #d66d46;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#delivery-banner h4 {
+  font-size: 1.1rem;
 }
 
 /* Grow Rotate - hover.css by Ian Lunn */

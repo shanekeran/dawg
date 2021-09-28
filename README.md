@@ -5,7 +5,7 @@ Dawg is a full-stack application that contains CRUD functinality and built in st
 
 [View the live project by clicking here](http://shanekeran-dawg.herokuapp.com/)
 
-![mockup of the website on different devices](wireframes/amiresponsive.png)
+![mockup of the website on various devices](./readme_images/amiresponsive.PNG)
 
 <span id="top"></span>
 
@@ -28,21 +28,21 @@ I used user stories and the five planes of user experience design as a framework
 
 *As a site user, I want to*
 
-- clearly understand the purpose of the site upon entering for the first time.
-- easily navigate the site so that I can find the pages and products I want quickly and with ease.
-- have the ability to sort products alphabetically and by price.
-- view the current total of shopping bag at any time and have the option to update or delete items.
-- be able to create an account to save shipping information and view previous orders.
-- contact dawg incase I have any questions or concerns.
-- easily recover my password in the likely event that I forget it.
-- receive a confirmation email when I have placed an order.
+- Clearly understand the purpose of the site upon entering for the first time.
+- Easily navigate the site so that I can find the pages and products I want quickly and with ease.
+- Have the ability to sort products alphabetically and by price.
+- View the current total of shopping bag at any time and have the option to update or delete items.
+- Be able to create an account to save shipping information and view previous orders.
+- Contact dawg incase I have any questions or concerns.
+- Easily recover my password in the likely event that I forget it.
+- Receive a confirmation email when I have placed an order.
 
 *As a site owner, I want to*
 
-- give super users a straightforward process for adding or making changes to products on the site.
-- easily add new store location information as the company expands throughout Ireland.
-- store contact form submissions.
-- only display the pages that are currently accessible to the user navigating the site.
+- Give site admins a straightforward process for adding or updating products on the site.
+- Easily add new store location information as the company expands throughout Ireland.
+- Store contact form submissions.
+- Only display the pages that are currently accessible to the user navigating the site.
 
 
 ### **Strategy**
@@ -54,10 +54,15 @@ I used user stories and the five planes of user experience design as a framework
 ### **Scope**
 
 Features to be included on the website are:
-- 
+- On mobile the category links on the bottom row will collapse into a burger menu. The links to the Account, About pages, Search bar and Shopping bag will remain as icons on the right hand side (No text).
+- Clicking on any product image will open up a product detail page containing more information on the selected product.
+- On screen sizes with a width of 577px+, Directly below the shopping cart icon will have the current total price of items added.
+- Orders equal or greater than €30 won't have a delivery charge applied. When an item is added to the shopping bag, the user will be told how much more they need to spend to qualify for free delivery.
+- CRUD functionality. Superusers can access the the Product management page to add products. They can also edit/delete products from the product page. Superusers can also use the Django admin panel to view customer submissions from the contact form and add new store locations to the locations page.
+- Message success/alert/error/warning toasts to give user feedback based on actions taken e.g. product successfully added to shopping bag or order confirmed.
 
 Features to be introduced at a later date:
-- Connect the Google Maps API to the Locations page to pinpoint each store's location.
+- Add the Google Maps API to the Locations page to pinpoint each store's exact location.
 - Add a testimonials and FAQ (returns / shipping information) app in addition to my current two custom models.
 
 ### **Structure**
@@ -66,11 +71,11 @@ Dawg is a multi-page website, with certain pages only accessible to users that a
 
 1. Home
 
-    The Home section contains a large logo and icons for each product category.
+    The Home section contains a large logo and images for each product category. It's clerly evident what the site content is. Since these images are present, the home page has a more simplified navigation menu compared to the other pages, it excludes the product menu and free delivery banner. All images on the page are clickable links which take you to their corresponding product category. The main Dawg image links to the "All Products" page which contains products of all category types. The images have also been applied with hover effects from hover.css to make the home page more fun and interactive.
 
 2. Products
 
-    
+    The products are all listed in a structured bootstrap card layout. There is a dropdown menu on the right to sort products by price, name or categories. Product categories are also listed on the lower navigation menu. If user clicks on a particular product, they will be taken to the product detail page containing the full information and an option to add to the shopping bag.
 
 3. Bag
 
@@ -104,23 +109,22 @@ Dawg is a multi-page website, with certain pages only accessible to users that a
 
 I used Balsamiq to create a wireframe for each device.
 
-[Wireframe - Home page](wireframes/filename.png)
+[Wireframe - Home page](./readme_images/wireframes/home.png)
 
-[Wireframe - Product](wireframes/filename.png)
+[Wireframe - Product](./readme_images/wireframes/product.png)
 
-[Wireframe - Contact](wireframes/filename.png)
+[Wireframe - Contact](./readme_images/wireframes/contact.png)
 
-[Wireframe - Location](wireframes/filename.png)
+[Wireframe - Location](./readme_images/wireframes/locations.png)
 
 ### **Surface**
 
 #### Colour
 
-My main colour theme is a mix of #F37A4D, #00000 and #FFFFFF.
+My main colour theme is a mix of #F37A4D, #00000 and #FFFFFF. I chose #F37A4D as it's a very vibrant colour which stands out from the background and demands the attention of the user. Dawg was designed to be a breath of fresh air amongst pet store brands, so it's important that the colour theme is aligned to its purpose.
 
-![Main colour 1](wireframes/colours/color1.PNG)
-![Main colour 2](wireframes/colours/color2.PNG)
-![Button colour](wireframes/colours/color3.PNG)
+![Colour theme](./readme_images/colours.png)
+
 
 #### Typography
 
@@ -198,6 +202,10 @@ ___
 
     Hover.css classes were used to apply custom hover effects on the home page.
 
+13. Coolors
+
+    Used to generate the colour palette image included in this README.
+
 <a href="#top">Back to top.</a>
 <span id="testing"></span>
 
@@ -269,6 +277,11 @@ How I deployed the application on Heroku:
 ___
 
 ### **Code**
+
+- Trixie
+
+    * Trixie granted me permission to use their product images from trixie.de, otherwise I would have had a very empty store to showcase.
+
 
 - W3Schools
 

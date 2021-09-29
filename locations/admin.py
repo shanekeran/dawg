@@ -9,7 +9,6 @@ class LocationAdmin(admin.ModelAdmin):
         'address',
         'phone_number',
         'opening_hours',
-        'image',
     )
 
 admin.site.register(Location, LocationAdmin)

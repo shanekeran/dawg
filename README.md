@@ -1,7 +1,7 @@
 # Dawg
 <i>The cool new dog supplies store</i>
 
-Dawg is a full-stack application that contains CRUD functinality and built in stripe functionality to purchase products.
+Dawg is a full-stack application allowing users to purchase products and create a profile to store their contact information or view their order history.
 
 [View the live project by clicking here](http://shanekeran-dawg.herokuapp.com/)
 
@@ -203,6 +203,10 @@ ___
 
     Used to generate the colour palette image included in this README.
 
+14. app.quickdatabasediagrams.com
+
+    Used to create the database schema.
+
 <a href="#top">Back to top.</a>
 <span id="testing"></span>
 
@@ -226,29 +230,35 @@ To clone this project from its [GitHub repository](https://github.com/shanekeran
 4. Change the current working directory to the location where you want the cloned directory to be made
 5. Type `git clone`, and then paste the URL you copied in Step 2
 
-```console
+```
 git clone https://github.com/shanekeran/dawg.git
 ```
 
 6. Press Enter. Your local clone will be created
 7. Create a file called env.py to hold your app's environment variables, which should contain the following:
 
-```console
-import os
+```
 
-os.environ.setdefault("IP", "0.0.0.0")
-os.environ.setdefault("PORT", "5000")
-os.environ.setdefault("SECRET_KEY", "<app secret key></app>")
-os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@<cluster_name>-ofgqg.mongodb.net/<database_name>retryWrites=true&w=majority")
-os.environ.setdefault("MONGO_DBNAME", "<database name>")
-os.environ.setdefault("EMAIL_ADDRESS", "<sender email address>")
-os.environ.setdefault("PASSWORD", "<email address password></email>")
+DEVELOPMENT - Set to True
+SECRET_KEY - I reccomend using a free Django Secret Key Generator for this key value
+STRIPE_PUBLIC_KEY - From Developer's section of the Stripe dashboard
+STRIPE_SECRET_KEY - From Developer's section of the Stripe dashboard
+STRIPE_WH_SECRET - From Stripe's developer API after creating a webhook
+
 ```
 8. env.py must be listed in your .gitignore file to prevent your environment variables being pushed publicly
-9. The app can now be run locally using
-
-```console
-python3 app.py
+9. Set up the local database running the following commands:
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+10. Create a superuser to access the Django Admin Panel with the command:
+```
+python3 manage.py createsuperuser
+```
+11. Start your server running the following command:
+```
+python3 manage.py runserver
 ```
 
 ### **Heroku**
@@ -262,7 +272,19 @@ How I deployed the application on Heroku:
 5. With the "Deploy" tab selected, "GitHub - Connect to GitHub" was chosen as the deployment method.
 6. Making sure my GitHub profile was displayed, I clicked "connect" next to the GitHub repository for this project.
 7. Then I navigated to the "Settings" tab and clicked on "Reveal Convig Vars".
-8. Added in my configuration variables to Heroku.
+8. Added in the following configuration variables to Heroku:
+    ```
+    AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY
+    DATABASE_URL
+    EMAIL_HOST_PASS
+    EMAIL_HOST_USER
+    SECRET_KEY
+    STRIPE_PUBLIC_KEY
+    STRIPE_SECRET_KEY
+    STRIPE_WH_SECRET
+    USE_AWS
+    ```
 9. Navigated back to the "Deploy" tab and selected "Enable Automatic Deploys" with the master branch selected from the dropdown box.
 10. Then clicked on "Deploy Branch" also with master selected.
 11. Site is deployed and any changes are automatically deployed each time they are updated and pushed to GitHub during development.

@@ -130,9 +130,11 @@ I chose the Shrikhand font for my logo text because of its "groovy" and alternat
 
 ## Database
 ___
-For this project I used postgres as my Database
+During local development, I used Django's default SQLite3 database. The deployed site on Heroku uses a PostgreSQL database.
 
 ### **Database schema**
+
+![Dawg database](./readme_images/database.PNG)
 
 
 <span id="tech"></span>

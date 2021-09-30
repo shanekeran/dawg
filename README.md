@@ -66,6 +66,7 @@ Features to be included on the website are:
 Features to be introduced at a later date:
 - Add the Google Maps API to the Locations page to pinpoint each store's exact location.
 - Add a testimonials and FAQ (returns / shipping information) app in addition to my current two custom models.
+- Email contact form submissions shopdawgsupplies@gmail.com in addition to being stored on the database.
 
 ### **Structure**
 
@@ -311,11 +312,6 @@ ___
 
 ### **Code**
 
-- Trixie
-
-    * Trixie granted me permission to use their product images from trixie.de, otherwise I would have had a very empty store to showcase.
-
-
 - W3Schools
 
     * [How to flip an image in CSS](https://www.w3schools.com/howto/howto_css_flip_image.asp)
@@ -328,6 +324,24 @@ ___
 - Code Institute
 
     * I heavily relied on the Boutique Ado walkthrough project to build the basics of this application
+
+
+### Imagery
+
+- Trixie
+
+    + Trixie granted me permission to use their product images from trixie.de, otherwise I would have had a very empty store to showcase. All images not refrenced below were sourced from their website. <details><summary>Click here to view the email granting permission.</summary>
+    <img src="./readme_images/permission.PNG" width="701px" height="260px"></details>
+
+
+- Pixabay
+
+    + Two dog collar product images. [Collar 1](https://pixabay.com/photos/paracord-bracelet-dog-collar-woven-5764201/) and [Collar 2](https://pixabay.com/photos/paracord-bracelet-dog-collar-woven-5764211/). These images are free for commerical use, with no attribution required.  
+
+
+- Flikr (user: Marco Verch)
+
+    + [Dog food product image.](https://c1.staticflickr.com/1/65535/49277797466_ed165fb2c1_b.jpg). Original image taken by Marco Verch. This image is available under Creative Commons 2.0. 
 
 
 ### Acknowledgements

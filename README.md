@@ -1,7 +1,7 @@
 # Dawg
 <i>The cool new dog supplies store</i>
 
-Dawg is a full-stack application allowing users to purchase products and create a profile to store their contact information or view their order history.
+Dawg is a full-stack application allowing users to purchase products and create a profile to store their contact information or view their order history. Dawg is fictional company that sells dog specific pet products.
 
 [View the live project by clicking here](http://shanekeran-dawg.herokuapp.com/)
 
@@ -47,7 +47,9 @@ I used user stories and the five planes of user experience design as a framework
 
 ### **Strategy**
 
+The primary purpose of the website is to facilitate the purchase of canine products. With Dawg, I wanted to create a modern and fun brand. The target market of Dawg, isn't limited by age as the site can used by anybody. The design however has been styled to catch the attention of the younger generation. This was done by using bright bold colours, the Dawg character and dog related messaging throughout the site such as the 404 page which states "Error 404 - Who let the dogs out?".
 
+While planning the project, I reviewed competitors websites such as Petstop.ie and MaxiZoo.ie. The Maxi Zoo website only offered product information without the ability to purchase or even browse through a product catalogue. Petstop on the otherhand had a beautifully designed website, with captivating imagery and a wide range of functionality to match. I user their website as a source of inspiration for Dawg, as I knew they would be the primary competitor.
 
 
 
@@ -191,7 +193,7 @@ ___
 
     The live project was deployed to Heroku.
 
-11. AWS
+11. AWS S3
 
     AWS was used to store the static files for the deployed site.
 
@@ -206,6 +208,18 @@ ___
 14. app.quickdatabasediagrams.com
 
     Used to create the database schema.
+
+15. jQuery
+
+    Javascript library.
+
+16. Django
+
+    Python framework on which the application was built from.
+
+17. Stripe
+
+    To facilitate and receive card payments.
 
 <a href="#top">Back to top.</a>
 <span id="testing"></span>

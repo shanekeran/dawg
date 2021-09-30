@@ -35,7 +35,6 @@ I used user stories and the five planes of user experience design as a framework
 - Be able to create an account to save shipping information and view previous orders.
 - Contact dawg incase I have any questions or concerns.
 - Easily recover my password in the likely event that I forget it.
-- Receive a confirmation email when I have placed an order.
 
 *As a site owner, I want to*
 
@@ -126,7 +125,7 @@ My main colour theme is a mix of #F37A4D, #00000 and #FFFFFF. I chose #F37A4D as
 
 #### Typography
 
-I chose the Shrikhand font for my logo text because of its "groovy" and alternative feel, which I feel matches the tone of the site.
+The main body font-family is Lato for it's simplicity and readability. I chose the Shrikhand font for my logo text because of its "groovy" and alternative feel, which I feel matches the tone of the dawg brand. Both custom fonts have regular fonts as fallbacks in the event Google Fonts is unreachable.
 
 <a href="#top">Back to top.</a>
 <span id="database"></span>

@@ -1,33 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-                
+{% block content %}
+    <div class="overlay"></div>
+    <div id="container-fluid contact-form-container bg-white">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 text-center">
+                <hr>
+                <h2 class="logo-font mb-4">Contact Us</h2>
+                <h5 class="text-muted">Got any questions / concerns? Let us know below.</h5>
+                <hr>
             </div>
         </div>
-    </div>
-{% endblock %}
-
-{% block content %}
-<div class="overlay"></div>
-<div id="container-fluid contact-form-container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-6 text-center">
-            <hr>
-            <h2 class="logo-font mb-4">Contact Us</h2>
-            <h5 class="text-muted">Got any questions / concerns? Let us know below.</h5>
-            <hr>
+        <div class="row justify-content-center">
+            <form action="{% url 'contact' %}" method="POST" class="col-10 col-md-6 col-xl-4 contact-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form|crispy}}
+                <input type="submit" class="btn btn-orange border-black mb-5" value="Submit">
+            </form>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <form action="{% url 'contact' %}" method="POST" class="col-10 col-md-6 col-xl-4 contact-form" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{form|crispy}}
-            <input type="submit" class="btn btn-orange border-black mb-5" value="Submit">
-        </form>
-    </div>
-</div>
 {% endblock %}

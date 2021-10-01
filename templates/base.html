@@ -91,14 +91,14 @@
                     </div>
                 </li>
                 <li class="list-inline-item dropdown">
-                  <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                  <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false">
                       <div class="text-center">
                           <div><i class="fas fa-info-circle fa-2x"></i></div>
                           <p class="my-0">About</p>
                       </div>
                   </a>
-                  <div class="dropdown-menu border-black" aria-labelledby="user-options">
+                  <div class="dropdown-menu border-black">
                       <a href="{% url 'locations' %}" class="dropdown-item">Locations</a>
                       <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
                   </div>
@@ -160,7 +160,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-      <script type="text/javascript">
+      <script>
         $('.toast').toast('show');
       </script>
     {% endblock %}

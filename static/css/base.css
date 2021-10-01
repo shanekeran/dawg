@@ -6,7 +6,7 @@ body {
     background-color: #F37A4D;
     height: calc(100vh - 164px);
     color: rgb(32, 32, 32);
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 }
 
 header{
@@ -23,7 +23,7 @@ header{
 }
 
 .logo-font {
-    font-family: 'shrikhand';
+    font-family: 'shrikhand', cursive;
 }
 
 .main-logo-link {
@@ -224,7 +224,7 @@ button:focus {
     border-radius: 20px!important;
 }
 
-.btt-link, .update-link, .remove-item {
+.btt-link, .update-link, .remove-item, .remove-item-mobile {
     cursor: pointer;
 }
 

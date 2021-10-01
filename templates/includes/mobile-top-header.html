@@ -24,12 +24,12 @@
   <!-- Open My Account dropdown menu -->
   <li class="list-inline-item dropdown">
       <!-- Account -->
-      <a class="text-black nav-link d-block d-md-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="text-black nav-link d-block d-md-none" href="#" id="user-options-mobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="text-center">
               <div><i class="fas fa-dog fa-2x"></i></div>
           </div>
       </a>
-      <div class="dropdown-menu border-black" aria-labelledby="user-options">
+      <div class="dropdown-menu border-black" aria-labelledby="user-options-mobile">
           {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -44,13 +44,13 @@
   </li>
   <li class="list-inline-item dropdown">
       <!-- About -->
-    <a class="text-black nav-link d-block d-md-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+    <a class="text-black nav-link d-block d-md-none" href="#" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-info-circle fa-2x"></i></div>
         </div>
     </a>
-    <div class="dropdown-menu border-black" aria-labelledby="user-options">
+    <div class="dropdown-menu border-black">
         <a href="{% url 'locations' %}" class="dropdown-item">Locations</a>
         <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
     </div>

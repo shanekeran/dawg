@@ -70,7 +70,10 @@ When a first time user lands on the home page, they'll see the main dawg logo an
 
 When a User is not logged in:
 - They can access all pages except the profile, product management or sign out page.
+
+
 When a User is logged in:
+
 - They can access all pages except the sign up page.
 - They can only access the Product management page if they are a superuser.
 </details>
@@ -78,3 +81,44 @@ When a User is logged in:
 
 ## Issues and Bugs during development
 ___
+
+### Images not loading after upload to AWS : <span style="color: green;">Resolved</span>
+
+content
+<br/>
+
+### Bag items displaying on unrelated toast success message : <span style="color: green;">Resolved</span>
+content
+<br/>
+
+### Dropdown menu overflowing on small screens : <span style="color: green;">Resolved</span>
+content
+<details><summary>Click here to display image</summary>
+
+![image](./readme_images/dropdown-menu.PNG)
+</details>
+<br/>
+
+### Big difference in product image heights : <span style="color: green;">Resolved</span>
+content
+<details><summary>Click here to display image</summary>
+
+![image](./readme_images/product-heights.PNG)
+</details>
+<br/>
+
+### Occasional slow loading of dog kennel images on the locations page : <span style="color: red;">Unresolved</span>
+content
+<details><summary>Click here to display image</summary>
+
+![image](./readme_images/slow-load.PNG)
+</details>
+<br/>
+
+### Small section of Orange background colour appearing during page scroll for mobile devices : <span style="color: green;">Resolved</span>
+content
+<details><summary>Click here to display image</summary>
+
+![image](./readme_images/background-bug.jpg)
+</details>
+<br/>

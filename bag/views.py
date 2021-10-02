@@ -21,15 +21,15 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, 
-            f'Dawg added an extra {product.name} to your bag')
+        messages.success(request,
+                         f'Dawg added an extra {product.name} to your bag')
     else:
         bag[item_id] = quantity
         messages.success(request, f'Dawg added {product.name} to your bag')
 
-
     request.session['bag'] = bag
     return redirect(redirect_url)
+
 
 def adjust_bag(request, item_id):
     """ Adjust the quantity of the specified product to the specified """
@@ -42,13 +42,16 @@ def adjust_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'You now have {bag[item_id]} {product.name} in your bag')
+        messages.success(
+            request, f'You now have {bag[item_id]} {product.name} in your bag'
+            )
     else:
         bag.pop(item_id)
         messages.success(request, f'Dawg removed {product.name} from your bag')
 
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
 
 def remove_from_bag(request, item_id):
     """ Remove the item from the shopping bag """

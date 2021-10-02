@@ -3,6 +3,7 @@ from .models import Location
 
 # Register your models here.
 
+
 class LocationAdmin(admin.ModelAdmin):
     list_display = (
         'city',
@@ -10,5 +11,6 @@ class LocationAdmin(admin.ModelAdmin):
         'phone_number',
         'opening_hours',
     )
+
 
 admin.site.register(Location, LocationAdmin)

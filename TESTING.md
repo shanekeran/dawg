@@ -127,6 +127,8 @@ While conducting responsive testing, I discovered while vertically scrolling on 
 When using the plus and minus buttons to increment/decrement product quantities, the buttons will be disabled for values less than 1 or greater than 99. If the user manually inputs a number outside of the minimum/maximum allowed value, while on the product detail page it won't accept the value but if done on the bag page, it will allow it.
 <br/>
 
+<a href="#top">Back to top.</a>
+
 ## Manual Testing
 ___
 
@@ -138,7 +140,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate my 
 
 <details><summary>Click here to view testing document</summary>
 
-![document showing validation test results](./readme_images/validation.PNG)
+![Code validation test results](./readme_images/validation.PNG)
 </details>
 <br/>
 
@@ -184,3 +186,16 @@ ___
 Google Chrome was used throughout the development process. I tested Dawg on the latest versions of Microsoft Edge, Firefox and Safari(From iPad device only). The site functions well on all the browsers tested.
 
 On Microsft Edge, the #F37A4D background colour appears if you click and drag the page upwards while at the bottom of the page. I demonstrated this within a short loom video [here](https://www.loom.com/share/b55e5a090bbb46f6b5bc102434671386). This only occurs on the Edge browser and is something I'll look into in the future.
+
+## Google Lighthouse
+___
+
+Google lighthouse was ran on the main pages of the website. Overall I'm pleased with the results on desktop but the performance is lacking on mobile. The main cause for this is related to images. I plan on compressing the images further to alleviate this in the future to try bring these scores up and have the page speed improved for mobile.
+
+<details><summary>Click here to view lighthouse scores</summary>
+
+![Google lighthouse scores](./readme_images/lighthouse.PNG)
+</details>
+<br/>
+
+<a href="#top">Back to top.</a>

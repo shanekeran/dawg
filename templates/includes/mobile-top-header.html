@@ -1,7 +1,8 @@
 <ul class="mb-0 p-0">
     <!-- Open search bar -->
     <li class="list-inline-item">
-      <a class="text-black nav-link d-block d-md-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="text-black nav-link d-block d-md-none" href="#" id="mobile-search" 
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="search bar">
           <div class="text-center">
               <div><i class="fas fa-search fa-2x"></i></div>
           </div>
@@ -24,7 +25,8 @@
   <!-- Open My Account dropdown menu -->
   <li class="list-inline-item dropdown">
       <!-- Account -->
-      <a class="text-black nav-link d-block d-md-none" href="#" id="user-options-mobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="text-black nav-link d-block d-md-none" href="#" id="user-options-mobile" 
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="account menu">
           <div class="text-center">
               <div><i class="fas fa-dog fa-2x"></i></div>
           </div>
@@ -45,7 +47,7 @@
   <li class="list-inline-item dropdown">
       <!-- About -->
     <a class="text-black nav-link d-block d-md-none" href="#" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
+        aria-expanded="false" aria-label="about menu">
         <div class="text-center">
             <div><i class="fas fa-info-circle fa-2x"></i></div>
         </div>
@@ -57,7 +59,8 @@
   </li>
   <!-- Shopping basket -->
   <li class="list-inline-item">
-      <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-md-none" href="{% url 'view_bag' %}">
+      <a class="{% if grand_total %}text-black font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-md-none"
+       href="{% url 'view_bag' %}" aria-label="shopping bag">
           <div class="text-center">
             <i class="fas fa-shopping-cart fa-2x"></i>
           </div>

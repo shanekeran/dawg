@@ -67,6 +67,10 @@ button:focus {
 
 /* Home Page */
 
+.sub-heading {
+  font-size: 1.5rem;
+}
+
 #home-logo{
     width: auto;
     height: 50vh;
@@ -461,6 +465,10 @@ color: #fff!important;
 }
 
 @media (max-width: 576px) {
+  .sub-heading{
+    font-size: 1rem;
+  }
+
   .home-icons{
     width: 30vw;
   }
@@ -474,7 +482,7 @@ color: #fff!important;
   }
 
   .location-info{
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .city{

@@ -70,14 +70,14 @@
 
                             <div class="col-12">
                                 <!-- Return to products page / keep shopping button -->
-                                <a href="{% url 'products' %}" class="btn btn-orange border-black rounded-0 mt-5">
+                                <a href="{% url 'products' %}" class="btn btn-orange border-black rounded-0 mt-1">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span>Keep Shopping</span>
                                 </a>
                                 <!-- Add to bag button -->
-                                <input type="submit" class="btn btn-orange border-black rounded-0 mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-orange border-black rounded-0 mt-1" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>

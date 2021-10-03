@@ -19,7 +19,7 @@ When a first time user lands on the home page, they'll see the main dawg logo an
 - On pages likely to involve some vertical scrolling, a back to top arrow has been placed to easily allow the user to return to the top of the page.
 </details>
 
-<details><summary>- Have the ability to sort products alphabetically and by price.</summary>
+<details><summary>Have the ability to sort products alphabetically and by price.</summary>
 
 - A sorting dropdown menu is featured on the product page allowing users to sort by price (low/high), catergory or alphabetically. This will be increasingly important as more products are added to the database.
 - The lower navigation menu also gives users the option to go directly to All Products by price or by category, bypassing the need to use the sort dropdown menu.
@@ -168,3 +168,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate my 
     +   ./checkout/webhooks.py:31:5: F841 local variable 'e' is assigned to but never used
 
     I decided to also ignore these suggestions as I believe most likely they are needed but due to time constraints I havent got the time to test the site's functionality without them included.
+
+## Responsive Testing
+
+I used [Responsively](https://responsively.app/download/) and the chrome developer tools to test Dawg on a variety of screen sizes and orientations. All tests were successful, with the site retaining its function and design across the different device simulations.

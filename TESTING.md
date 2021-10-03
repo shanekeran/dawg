@@ -123,6 +123,10 @@ While conducting responsive testing, I discovered while vertically scrolling on 
 </details>
 <br/>
 
+### Minimum and maximum product quantity can be bypassed by manual entry : <span style="color: red;">Unresolved</span>
+When using the plus and minus buttons to increment/decrement product quantities, the buttons will be disabled for values less than 1 or greater than 99. If the user manually inputs a number outside of the minimum/maximum allowed value, while on the product detail page it won't accept the value but if done on the bag page, it will allow it.
+<br/>
+
 ## Manual Testing
 ___
 
@@ -170,5 +174,13 @@ The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate my 
     I decided to also ignore these suggestions as I believe most likely they are needed but due to time constraints I havent got the time to test the site's functionality without them included.
 
 ## Responsive Testing
+___
 
 I used [Responsively](https://responsively.app/download/) and the chrome developer tools to test Dawg on a variety of screen sizes and orientations. All tests were successful, with the site retaining its function and design across the different device simulations.
+
+## Browser Testing
+___
+
+Google Chrome was used throughout the development process. I tested Dawg on the latest versions of Microsoft Edge, Firefox and Safari(From iPad device only). The site functions well on all the browsers tested.
+
+On Microsft Edge, the #F37A4D background colour appears if you click and drag the page upwards while at the bottom of the page. I demonstrated this within a short loom video [here](https://www.loom.com/share/b55e5a090bbb46f6b5bc102434671386). This only occurs on the Edge browser and is something I'll look into in the future.

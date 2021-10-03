@@ -84,41 +84,87 @@ ___
 
 ### Images not loading after upload to AWS : <span style="color: green;">Resolved</span>
 
-content
+After setting up AWS S3 for the deployed version of my site, I noticed that 3 or 4 product images were not loading, even though the correct URL was present and the image was uploaded to AWS. After spending some time on it I discovered that after the upload, some images containing two words such as pup-harness, were stripped of their hyphen. The result was the file name containing a space "pup harness.jpg" which was the cause of my issue. I resolved this by renaming the file and adding the hyphen back in.
 <br/>
 
 ### Bag items displaying on unrelated toast success message : <span style="color: green;">Resolved</span>
-content
+During testing I discovered that when users do certain actions such as submitting the contact form or signing in, the toast success message would also include the bag items. I felt this was unncessary and distracting from the actual success message. To remedy this I added a value of "non_product_page = True" to the context of the home page and within the toast_success file I added some logic to only include the bag items if there is no value for non_product page. Now when users submit the contact form or sign in, when they get redirected to the home page the toast success message only displays the relevant message. When a user adds a product to their bag while browsing the product page, the toast_success message will include the bag items.
 <br/>
 
 ### Dropdown menu overflowing on small screens : <span style="color: green;">Resolved</span>
-content
+On smaller screens the dropdown menus for the About section were spilling over the edge of the screen. To remedy this I added left: -65px to override the existing left: 0px code being placed on the element. Since the below screenshot was taken I also adjusted the background color back to white and added a thin border.
 <details><summary>Click here to display image</summary>
 
-![image](./readme_images/dropdown-menu.PNG)
+![dropdown menu partially off-screen](./readme_images/dropdown-menu.PNG)
 </details>
 <br/>
 
 ### Big difference in product image heights : <span style="color: green;">Resolved</span>
-content
+One the first issues I faced, was when I began adding products to my database. After loading all the product images and displaying them on the website, I noticed certain products had a major difference in height. I resolved this by adding a maximum height and width. The product cards with smaller images were then misaligned with those that had larger images so I added flex-grow to the card to prevent this.
 <details><summary>Click here to display image</summary>
 
-![image](./readme_images/product-heights.PNG)
+![products of varying height and misaligned](./readme_images/product-heights.PNG)
 </details>
 <br/>
 
 ### Occasional slow loading of dog kennel images on the locations page : <span style="color: red;">Unresolved</span>
-content
+During testing, I noticed an intermittent issues that occured very infrequently and randomly which was the dog kennel images not loading on the locations page. I imagine this was likely a result of clearing my cache and slow internet speed. Refreshing the page fixed the issue in the moment but I haven't been able to find a clear resolution yet for this problem. The image element contains alt text in case this occurs for the user viewing the page.
 <details><summary>Click here to display image</summary>
 
-![image](./readme_images/slow-load.PNG)
+![screenshot showing kennel images not loading](./readme_images/slow-load.PNG)
 </details>
 <br/>
 
-### Small section of Orange background colour appearing during page scroll for mobile devices : <span style="color: green;">Resolved</span>
-content
+### Small section of #F37A4D background colour appearing during page scroll for mobile devices : <span style="color: green;">Resolved</span>
+While conducting responsive testing, I discovered while vertically scrolling on mobile devices, a small portion of #F37A4D background would appear for a couple of seconds at the bottom of page. I imagined this was due to the fact that the white background is applied on the overlay div, with the actual background colour of the whole page underneath being #F37A4D. To remedy this I added a class of bg-white to the body container.
 <details><summary>Click here to display image</summary>
 
-![image](./readme_images/background-bug.jpg)
+![screenshot depicting background color bug](./readme_images/background-bug.jpg)
 </details>
 <br/>
+
+## Manual Testing
+___
+
+
+## Validation
+___
+
+The W3C Markup Validator, W3C CSS Validator and JSHint were used to validate my code to ensure no syntax errors were overlooked. For my Python code, I used the flake8 command within GitPod to make sure it met PEP8 standards.
+
+<details><summary>Click here to view testing document</summary>
+
+![document showing validation test results](./readme_images/validation.PNG)
+</details>
+<br/>
+
+- HTML Validator
+
+    Overall, the HTML code passed after some minor refactoring. However 1 warning and two errors remain. The errors can be seen here:
+    ![html validator error](./readme_images/product-management-error.PNG).
+    These errors are related to the feature allowing users to add/update the product image from the product management page. As this is dynamically added by Django, I'm unable to access the label or id of id_image to change it so this error will remain. The warning is due to the empty heading elment on the checkout page (h1 class="text-light logo-font loading-spinner"). This contains the loading icon and due to time constraints I have chosen to skip this warning in favour of submitting this project on time.
+
+- CSS Validator
+
+    Base.css passed with 0 errors and 0 warnings.
+
+-  JSHint
+
+    JSHint revealed 0 errors. Initially it showed various missing semicolon warnings, these have now been applied.
+
+- PEP8 / flake8
+
+    Inputting the "python3 -m flake8" command will suggest multiple fixes required for migration files which can be ignored. It also flags the following for settings.py:
+    +   ./dawg/settings.py:139:80: E501 line too long (88 > 79 characters)
+    +   ./dawg/settings.py:142:80: E501 line too long (81 > 79 characters)
+    +   ./dawg/settings.py:145:80: E501 line too long (82 > 79 characters)
+    +   ./dawg/settings.py:148:80: E501 line too long (83 > 79 characters)
+
+    These are strings such as 'django.contrib.auth.password_validation.MinimumLengthValidator' and I'll be leaving them as they are based on advice from the code institute slack community [here](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1605890486174200).
+
+    It also suggests removing the following:
+    +   ./checkout/apps.py:8:9: F401 'checkout.signals' imported but unused
+    +   ./checkout/webhooks.py:28:5: F841 local variable 'e' is assigned to but never used
+    +   ./checkout/webhooks.py:31:5: F841 local variable 'e' is assigned to but never used
+
+    I decided to also ignore these suggestions as I believe most likely they are needed but due to time constraints I havent got the time to test the site's functionality without them included.

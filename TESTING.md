@@ -187,6 +187,11 @@ Google Chrome was used throughout the development process. I tested Dawg on the 
 
 On Microsft Edge, the #F37A4D background colour appears if you click and drag the page upwards while at the bottom of the page. I demonstrated this within a short loom video [here](https://www.loom.com/share/b55e5a090bbb46f6b5bc102434671386). This only occurs on the Edge browser and is something I'll look into in the future.
 
+## Accessibility testing
+___
+
+I used the WAVE Web Accessibility Evaluation Tool to scan the main pages of Dawg. I implemented a lot of changes to improve accessibility such as adding missing form labels, ensuring each page has a h1 element, utilising bootstraps "sr-only" class to add in text for screen readers and using the aria-hidden attribute to hide unnesscary elements such as icons.
+
 ## Google Lighthouse
 ___
 

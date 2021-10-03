@@ -13,6 +13,10 @@ header{
   background-color: #F37A4D;
 }
 
+h1{
+  font-size: 2rem;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -89,7 +93,7 @@ button:focus {
 }
 
 .home-links > span{
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .home-icons{
@@ -103,7 +107,7 @@ button:focus {
   border-radius: 20px 20px 0px 0px;
 }
 
-#delivery-banner h4 {
+#delivery-banner span {
   font-size: 1.1rem;
 }
 
@@ -455,12 +459,16 @@ color: #fff!important;
       font-size: 1rem;
   }
 
-  #delivery-banner h4 {
+  #delivery-banner span {
       font-size: .9rem;
   }
 
   .increment-qty, .decrement-qty {
       padding: .25rem .5rem !important;
+  }
+
+  .card-img-top{
+    max-height: 280px;
   }
 }
 
@@ -493,5 +501,9 @@ color: #fff!important;
 @media (max-width: 320px) {
   .fa-2x{
     font-size: 1.5em!important;
+  }
+
+  .card-img-top{
+    max-height: 200px;
   }
 }

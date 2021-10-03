@@ -221,6 +221,10 @@ ___
 
     To facilitate and receive card payments.
 
+18. WAVE Web Accessibility Evaluation Tool
+
+    Increase the accessibility of the site by using the tool to check for errors and warnings.
+
 <a href="#top">Back to top.</a>
 <span id="testing"></span>
 

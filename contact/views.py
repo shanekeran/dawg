@@ -8,13 +8,13 @@ def contact_form(request):
 
     if request.method == 'POST':
         form = ContactUs(request.POST)
-        if form.is_valid:
+        if form.is_valid():
             form.save()
             messages.success(request, 'Dawg has received your message!')
             return redirect(reverse('home'))
         else:
             messages.error(request,
-                           'Error. Review your submission and try again.')
+                            'Error. Review your submission and try again.')
     else:
         form = ContactUs()
 

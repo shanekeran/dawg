@@ -132,6 +132,145 @@ When using the plus and minus buttons to increment/decrement product quantities,
 ## Manual Testing
 ___
 
+### Home and Home Navigation bar
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
+| Clicking on image of Dawg | Opens the All Products page | As expected | Pass |
+| Clicking on 'Collars & Leads' image | Opens the Collars & Leads category page | As expected | Pass |
+| Clicking on 'Food' image | Opens the Food category page | As expected | Pass |
+| Clicking on 'Beds' image | Opens the Beds category page | As expected | Pass |
+| Clicking on 'Toys' image | Opens the Toys category page | As expected | Pass |
+| Clicking on the My Account icon | Opens dropdown menu | As expected | Pass |
+| Clicking on the Register link | Opens the signup page | As expected | Pass |
+| Clicking on the Login link | Opens signin page | As expected | Pass |
+| Clicking on the About icon | Opens dropdown menu | As expected | Pass |
+| Clicking on the Locations link | Opens locations page | As expected | Pass |
+| Clicking on the Contact Us link | Opens contact page | As expected | Pass |
+| Clicking on Shopping cart icon | Opens shopping bag page | As expected | Pass |
+| Confirm correct total below Shopping Cart icon | First time users should see €0.00 | As expected | Pass |
+
+### Main Navigation bar (including Product menu)
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
+| Clicking on Dawg logo | Opens the Home page | As expected | Pass |
+| Clicking on Search button with no criteria | Displays toast error | As expected | Pass |
+| Searching for "medium" | Displays search results containing medium in title or product description | As expected | Pass |
+| Clicking on the My Account icon | Opens dropdown menu | As expected | Pass |
+| Clicking on the Register link | Opens the signup page | As expected | Pass |
+| Clicking on the Login link | Opens signin page | As expected | Pass |
+| Clicking on the About icon | Opens dropdown menu | As expected | Pass |
+| Clicking on the Locations link | Opens locations page | As expected | Pass |
+| Clicking on the Contact Us link | Opens contact page | As expected | Pass |
+| Clicking on Shopping cart icon | Opens shopping bag page | As expected | Pass |
+| Clicking on All Products | Opens dropdown menu | As expected | Pass |
+| Clicking on the By Price link | Opens the product page sorted by price | As expected | Pass |
+| Clicking on the By Category link | Opens the product page sorted by category | As expected | Pass |
+| Clicking on the All Products link | Opens the product page listing all products | As expected | Pass |
+| Clicking on Walking | Opens dropdown menu | As expected | Pass |
+| Clicking on the Collars link | Opens the product page showing only Collars | As expected | Pass |
+| Clicking on the Leads link | Opens the product page showing only Leads | As expected | Pass |
+| Clicking on the Harnesses link | Opens the product page showing only Harnesses | As expected | Pass |
+| Clicking on the All Walking Accessories link | Opens the product page listing all Walking Accessories products | As expected | Pass |
+| Clicking on Food | Opens dropdown menu | As expected | Pass |
+| Clicking on the Food link | Opens the product page showing only Food | As expected | Pass |
+| Clicking on the Treats link | Opens the product page showing only Treats | As expected | Pass |
+| Clicking on the Bowls link | Opens the product page showing only Bowls | As expected | Pass |
+| Clicking on the All Food Products link | Opens the product page listing all Food products | As expected | Pass |
+| Clicking on Beds | Opens dropdown menu | As expected | Pass |
+| Clicking on the Indoor link | Opens the product page showing only Indoor beds | As expected | Pass |
+| Clicking on the Outdoor link | Opens the product page showing only Outdoor beds | As expected | Pass |
+| Clicking on the Blankets link | Opens the product page showing only Blankets | As expected | Pass |
+| Clicking on the All Bed Products link | Opens the product page listing all Bed products | As expected | Pass |
+| Clicking on Toys | Opens dropdown menu | As expected | Pass |
+| Clicking on the Tennis balls link | Opens the product page showing only Tennis balls | As expected | Pass |
+| Clicking on the Squeaky link | Opens the product page showing only Squeaky toys | As expected | Pass |
+| Clicking on the All Toys link | Opens the product page listing all Toy products | As expected | Pass |
+| Resize to mobile screen size | Product menu collapses to Burger menu | As expected | Pass |
+| Resize to mobile screen size | Account, About and Grand total text is hidden | As expected | Pass |
+| Resize to mobile screen size | Search Bar collapses to just magnifying glass icon | As expected | Pass |
+| Click magnifying glass icon on mobile | Opens Search bar | As expected | Pass |
+| Click burger icon on mobile | Opens Navigation menu | As expected | Pass |
+
+### Product Page
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Click on Sort dropdown menu | Expands dropdown menu | As expected | Pass |
+| Clicking on the By Price(low to high) | Sorts products beginning with lowest price | As expected | Pass |
+| Clicking on the By Price(high to low) | Sorts products beginning with highest price | As expected | Pass |
+| Clicking on the By Name(A-Z) link | Sorts products by product name alphabetically | As expected | Pass |
+| Clicking on the By Name(Z-A) link | Sorts products by product name in reverse alphabetical order | As expected | Pass |
+| Clicking on the By Category(A-Z) link | Sorts products by category alphabetically | As expected | Pass |
+| Clicking on the By Category(Z-A) link | Sorts products by category in reverse alphabetical order | As expected | Pass |
+| Clicking on any product image | Opens the Product details page for that particular product | As expected | Pass |
+| Clicking on the tag below a product | Displays all other products with that product tag | As expected | Pass |
+| Clicking on back to top arrow | Jumps back to the top of the page | As expected | Pass |
+| Sign in as a superuser | Options to edit / delete appear below each product card | As expected | Pass |
+| Click on edit | Opens Product management editor | As expected | Pass |
+| Click on delete | Deletes product | As expected | Pass |
+
+### Product Detail Page
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Click on Keep Shopping button | Opens the product page | As expected | Pass |
+| Click on Add to bag button | Toast success message appears confirming action and displays current bag | As expected | Pass |
+| Click on Add to bag button | Grand total figure updates underneath shopping cart icon | As expected | Pass |
+| Click minus button | Quantity will decrease only if it's greater than 1 | As expected | Pass |
+| Click plus button | Quantity will increase only if it's lower than 99 | As expected | Pass |
+| Clicking on the product tag | Opens product page filtering for that product tag | As expected | Pass |
+| As a superuser, click on edit | Opens Product management editor | As expected | Pass |
+| As a superuser, click on delete | Deletes product | As expected | Pass |
+
+### Shopping bag
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Navigate here after shopping | Products added to the bag should be displayed here | As expected | Pass |
+| Click down arrow for Quantity | Quantity will decrease only if it's greater than 1 | As expected | Pass |
+| Click up arrow for Quantity | Quantity will increase only if it's lower than 99 | As expected | Pass |
+| Increase product quantity from 1 to 2 and select update | Quantity and pricing will update to reflect changes | As expected | Pass |
+| Select delete | Product is removed from bag and price is updated to reflect changes | As expected | Pass |
+| Add products totaling less than €30 | Delivery charge is applied | As expected | Pass |
+| Add products totaling more than €30 | Delivery charge is not applied | As expected | Pass |
+| Click on Keep Shopping button | Opens the product page | As expected | Pass |
+| Click on Secure Checkout button | Opens the checkout page | As expected | Pass |
+
+### Checkout
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Navigate here from the Shopping bag | Products from the Shopping bag should be displayed on the right hand side | As expected | Pass |
+| Submit checkout form without required fields | Order is not submitted | As expected | Pass |
+| Enter incorrect card details | Error message is shown | As expected | Pass |
+| Submit order form with correct details and stripe test card | Opens Order confirmation page displaying Order details | As expected | Pass |
+| Submit order form with correct details and stripe test card | Sends Order confirmation email to customer | As expected | Pass |
+| Submit order form with correct details and stripe test card | Order is created in the Admin panel | As expected | Pass |
+| Submit order form with correct details and stripe test card | Payment displays on Stripe dashboard | As expected | Pass |
+
+### Contact Us
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Try submit form without required fields | Form is not submitted and User is directed to missing form field | As expected | Pass |
+| Enter email without incorrect format | Form is not submitted and User is advised of the error | As expected | Pass |
+| Submit form with the required information | Redirected to Home and Success message displayed to user | As expected | Pass |
+
+### My Profile
+
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Enter delivery information and click update information | Success message displays and information is saved | As expected | Pass |
+| Click previous order number | Previous Order confirmation page is displayed | As expected | Pass |
+| Manually enter profile page URL while not logged in | Redirected to the sign in page | As expected | Pass |
+
+### Product Management Page
+
+
+
+
+
+
+
+
+
+
 
 ## Validation
 ___

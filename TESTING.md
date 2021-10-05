@@ -262,14 +262,28 @@ ___
 
 ### Product Management Page
 
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Click Category dropdown menu | Ensure all categories are displayed | As expected | Pass |
+| Try submit form without required fields | Form is not submitted and User is directed to missing form field | As expected | Pass |
+| Try submit form without image selected | Product is created and default image is displayed | As expected | Pass |
+| Submit the form with required fields | Product is created | As expected | Pass |
+| Click Cancel button | Redirected to Products page | As expected | Pass |
 
+### Account Pages (Login / Register / Logout)
 
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| Enter incorrect login details | Error message is displayed | As expected | Pass |
+| Enter Correct login details | Opens Home page and success message is displayed | As expected | Pass |
+| Click sign out button | User is signed out and taken to the Home page. Message is displayed informing of the sign out | As expected | Pass |
+| Try submit register form without required fields | Form is not submitted and User is directed to missing form field | As expected | Pass |
+| Submit the register form with required fields | User is sent a verification email | As expected | Pass |
 
+### Error Pages
 
-
-
-
-
+| Submit the form with required fields | Product is created | As expected | Pass |
+| Enter random url | Custom 404 Error page is displayed | As expected | Pass |
+| Simulate server error | Custom 500 Error page is displayed | As expected | Pass |
+| Click buttons to return to store | Opens Home page | As expected | Pass |
 
 
 ## Validation

@@ -225,6 +225,10 @@ ___
 
     Increase the accessibility of the site by using the tool to check for errors and warnings.
 
+19. webaccessibility.com
+
+    Automated accessibility testing
+
 <a href="#top">Back to top.</a>
 <span id="testing"></span>
 
@@ -323,10 +327,14 @@ ___
 
     * [Hover grow-rotate, skew-forward and float-shadow effects](https://ianlunn.github.io/Hover/)
 
+- CSS-Tricks.com
+
+    * [CSS classes](https://css-tricks.com/snippets/css/css-triangle/)
+
 
 - Code Institute
 
-    * I heavily relied on the Boutique Ado walkthrough project to build the basics of this application
+    * I heavily relied on the Boutique Ado walkthrough project to build this application
 
 
 ### Imagery

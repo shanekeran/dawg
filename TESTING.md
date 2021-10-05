@@ -361,6 +361,21 @@ ___
 
 I used the WAVE Web Accessibility Evaluation Tool to scan the main pages of Dawg. I implemented a lot of changes to improve accessibility such as adding missing form labels, ensuring each page has a h1 element, utilising bootstraps "sr-only" class to add in text for screen readers and using the aria-hidden attribute to hide unnesscary elements such as icons.
 
+### Automated Accessibility testing
+
+After implementing the changes from the WAVE tool, I tested my main pages on webaccessibility.com and I'm really happy with the results shown below.
+
+<details><summary>Click here to view test results</summary>
+
+![Home page accessibility test results](./readme_images/accessibility_tests/home-test.PNG)
+![Products page accessibility test results](./readme_images/accessibility_tests/products-test.PNG)
+![Shopping bag accessibility test results](./readme_images/accessibility_tests/bag-test.PNG)
+![Contact Us accessibility test results](./readme_images/accessibility_tests/contact-test.PNG)
+![Locations page accessibility test results](./readme_images/accessibility_tests/locations-test.PNG)
+</details>
+
+
+
 ## Google Lighthouse
 ___
 

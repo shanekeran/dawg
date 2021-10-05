@@ -33,7 +33,7 @@ I used user stories and the five planes of user experience design as a framework
 - Have the ability to sort products alphabetically and by price.
 - View the current total of shopping bag at any time and have the option to update or delete items.
 - Be able to create an account to save shipping information and view previous orders.
-- Contact dawg incase I have any questions or concerns.
+- Contact dawg in case I have any questions or concerns.
 - Easily recover my password in the likely event that I forget it.
 
 *As a site owner, I want to*
@@ -48,7 +48,7 @@ I used user stories and the five planes of user experience design as a framework
 
 The primary purpose of the website is to facilitate the purchase of canine products. With Dawg, I wanted to create a modern and fun brand. The target market of Dawg, isn't limited by age as the site can used by anybody. The design however has been styled to catch the attention of the younger generation. This was done by using bright bold colours, the Dawg character and dog related messaging throughout the site such as the 404 page which states "Error 404 - Who let the dogs out?".
 
-While planning the project, I reviewed competitors websites such as Petstop.ie and MaxiZoo.ie. The Maxi Zoo website only offered product information without the ability to purchase or even browse through a product catalogue. Petstop on the otherhand had a beautifully designed website, with captivating imagery and a wide range of functionality to match. I user their website as a source of inspiration for Dawg, as I knew they would be the primary competitor.
+While planning the project, I reviewed competitors websites such as Petstop.ie and MaxiZoo.ie. The Maxi Zoo website only offered product information without the ability to purchase or even browse through a product catalogue. Petstop on the otherhand had a beautifully designed website, with captivating imagery and a wide range of functionality to match. I used their website as a source of inspiration for Dawg, as I knew they would be the primary competitor.
 
 
 
@@ -73,7 +73,7 @@ Dawg is a multi-page website, with certain pages only accessible to users that a
 
 1. Home
 
-    The Home section contains a large logo and images for each product category. It's clerly evident what the site content is. Since these images are present, the home page has a more simplified navigation menu compared to the other pages, it excludes the product menu and free delivery banner. All images on the page are clickable links which take you to their corresponding product category. The main Dawg image links to the "All Products" page which contains products of all category types. The images have also been applied with hover effects from hover.css to make the home page more fun and interactive.
+    The Home section contains a large logo and images for each product category. It's clearly evident what the site content is. Since these images are present, the home page has a more simplified navigation menu compared to the other pages, it excludes the product menu and free delivery banner. All images on the page are clickable links which take you to their corresponding product category. The main Dawg image links to the "All Products" page which contains products of all category types. The images have also been applied with hover effects from hover.css to make the home page more fun and interactive.
 
 2. Products
 
@@ -167,7 +167,7 @@ ___
 
 4. Bootstrap v4.4.1
 
-    Bootsrap was heavily used throught the site to speed up development time. Most notably on the navigation bar, buttons, grid layout on each page, card components for the products page and various alignment / styling classes applied to elements on each page to minimise custom css needed.
+    Bootsrap was heavily used throughout the site to speed up development time. Most notably on the navigation bar, buttons, grid layout on each page, card components for the products page and various alignment / styling classes applied to elements on each page to minimise custom css needed.
 
 5. Google Fonts
 

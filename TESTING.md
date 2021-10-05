@@ -21,7 +21,7 @@ When a first time user lands on the home page, they'll see the main dawg logo an
 
 <details><summary>Have the ability to sort products alphabetically and by price.</summary>
 
-- A sorting dropdown menu is featured on the product page allowing users to sort by price (low/high), catergory or alphabetically. This will be increasingly important as more products are added to the database.
+- A sorting dropdown menu is featured on the product page allowing users to sort by price (low/high), category or alphabetically. This will be increasingly important as more products are added to the database.
 - The lower navigation menu also gives users the option to go directly to All Products by price or by category, bypassing the need to use the sort dropdown menu.
 </details>
 
@@ -37,7 +37,7 @@ When a first time user lands on the home page, they'll see the main dawg logo an
 - If a user proceeds to checkout and they are not logged in, they'll be presented with an option to create an account or to sign in. If the user is signed in, they'll be able to save the inputted information to their profile for future use.
 </details>
 
-<details><summary>Contact dawg incase I have any questions or concerns.</summary>
+<details><summary>Contact dawg in case I have any questions or concerns.</summary>
 
 - Under the About section, there is a link to the Contact Us page where users can submit any questions or concerns to Dawg via the form.
 </details>
@@ -108,7 +108,7 @@ One the first issues I faced, was when I began adding products to my database. A
 <br/>
 
 ### Occasional slow loading of dog kennel images on the locations page : ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Unresolved
-During testing, I noticed an intermittent issues that occured very infrequently and randomly which was the dog kennel images not loading on the locations page. I imagine this was likely a result of clearing my cache and slow internet speed. Refreshing the page fixed the issue in the moment but I haven't been able to find a clear resolution yet for this problem. The image element contains alt text in case this occurs for the user viewing the page.
+During testing, I noticed an intermittent issues that occurred very infrequently and randomly which was the dog kennel images not loading on the locations page. I imagine this was likely a result of clearing my cache and slow internet speed. Refreshing the page fixed the issue in the moment but I haven't been able to find a clear resolution yet for this problem. The image element contains alt text in case this occurs for the user viewing the page.
 <details><summary>Click here to display image</summary>
 
 ![screenshot showing kennel images not loading](./readme_images/slow-load.PNG)

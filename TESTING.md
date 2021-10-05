@@ -82,16 +82,16 @@ When a User is logged in:
 ## Issues and Bugs during development
 ___
 
-### Images not loading after upload to AWS : <span style="color: green;">Resolved</span>
+### Images not loading after upload to AWS : ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Resolved
 
 After setting up AWS S3 for the deployed version of my site, I noticed that 3 or 4 product images were not loading, even though the correct URL was present and the image was uploaded to AWS. After spending some time on it I discovered that after the upload, some images containing two words such as pup-harness, were stripped of their hyphen. The result was the file name containing a space "pup harness.jpg" which was the cause of my issue. I resolved this by renaming the file and adding the hyphen back in.
 <br/>
 
-### Bag items displaying on unrelated toast success message : <span style="color: green;">Resolved</span>
+### Bag items displaying on unrelated toast success message : ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Resolved
 During testing I discovered that when users do certain actions such as submitting the contact form or signing in, the toast success message would also include the bag items. I felt this was unncessary and distracting from the actual success message. To remedy this I added a value of "non_product_page = True" to the context of the home page and within the toast_success file I added some logic to only include the bag items if there is no value for non_product page. Now when users submit the contact form or sign in, when they get redirected to the home page the toast success message only displays the relevant message. When a user adds a product to their bag while browsing the product page, the toast_success message will include the bag items.
 <br/>
 
-### Dropdown menu overflowing on small screens : <span style="color: green;">Resolved</span>
+### Dropdown menu overflowing on small screens : ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Resolved
 On smaller screens the dropdown menus for the About section were spilling over the edge of the screen. To remedy this I added left: -65px to override the existing left: 0px code being placed on the element. Since the below screenshot was taken I also adjusted the background color back to white and added a thin border.
 <details><summary>Click here to display image</summary>
 
@@ -99,7 +99,7 @@ On smaller screens the dropdown menus for the About section were spilling over t
 </details>
 <br/>
 
-### Big difference in product image heights : <span style="color: green;">Resolved</span>
+### Big difference in product image heights : ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Resolved
 One the first issues I faced, was when I began adding products to my database. After loading all the product images and displaying them on the website, I noticed certain products had a major difference in height. I resolved this by adding a maximum height and width. The product cards with smaller images were then misaligned with those that had larger images so I added flex-grow to the card to prevent this.
 <details><summary>Click here to display image</summary>
 
@@ -107,7 +107,7 @@ One the first issues I faced, was when I began adding products to my database. A
 </details>
 <br/>
 
-### Occasional slow loading of dog kennel images on the locations page : <span style="color: red;">Unresolved</span>
+### Occasional slow loading of dog kennel images on the locations page : ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Unresolved
 During testing, I noticed an intermittent issues that occured very infrequently and randomly which was the dog kennel images not loading on the locations page. I imagine this was likely a result of clearing my cache and slow internet speed. Refreshing the page fixed the issue in the moment but I haven't been able to find a clear resolution yet for this problem. The image element contains alt text in case this occurs for the user viewing the page.
 <details><summary>Click here to display image</summary>
 
@@ -115,7 +115,7 @@ During testing, I noticed an intermittent issues that occured very infrequently 
 </details>
 <br/>
 
-### Small section of #F37A4D background colour appearing during page scroll for mobile devices : <span style="color: green;">Resolved</span>
+### Small section of #F37A4D background colour appearing during page scroll for mobile devices : ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Resolved
 While conducting responsive testing, I discovered while vertically scrolling on mobile devices, a small portion of #F37A4D background would appear for a couple of seconds at the bottom of page. I imagined this was due to the fact that the white background is applied on the overlay div, with the actual background colour of the whole page underneath being #F37A4D. To remedy this I added a class of bg-white to the body container.
 <details><summary>Click here to display image</summary>
 
@@ -123,8 +123,12 @@ While conducting responsive testing, I discovered while vertically scrolling on 
 </details>
 <br/>
 
-### Minimum and maximum product quantity can be bypassed by manual entry : <span style="color: red;">Unresolved</span>
+### Minimum and maximum product quantity can be bypassed by manual entry : ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Unresolved
 When using the plus and minus buttons to increment/decrement product quantities, the buttons will be disabled for values less than 1 or greater than 99. If the user manually inputs a number outside of the minimum/maximum allowed value, while on the product detail page it won't accept the value but if done on the bag page, it will allow it.
+<br/>
+
+### {{ MEDIA_URL }} not loading on custom 500 error page : ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) Unresolved
+Although nearly identical to the 404 page, the 500 page was not displaying the main image or favicon. The reason for this is because the {{ MEDIA_URL }} was not being passed into the image src. The final url was only appearing with the file name. To rectify this I added the main image into the AWS static folder and also my local static folder. Then I used {% static dawg.png %} to load the main image instead. This worked but since the favicon was being loaded from the base.html I chose not to change the file path for that at the moment. For now the 500 error page will have the default browser favicon so I'll mark this as unresolved.
 <br/>
 
 <a href="#top">Back to top.</a>
@@ -196,6 +200,7 @@ ___
 ### Product Page
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Click on Sort dropdown menu | Expands dropdown menu | As expected | Pass |
 | Clicking on the By Price(low to high) | Sorts products beginning with lowest price | As expected | Pass |
 | Clicking on the By Price(high to low) | Sorts products beginning with highest price | As expected | Pass |
@@ -213,6 +218,7 @@ ___
 ### Product Detail Page
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Click on Keep Shopping button | Opens the product page | As expected | Pass |
 | Click on Add to bag button | Toast success message appears confirming action and displays current bag | As expected | Pass |
 | Click on Add to bag button | Grand total figure updates underneath shopping cart icon | As expected | Pass |
@@ -225,6 +231,7 @@ ___
 ### Shopping bag
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Navigate here after shopping | Products added to the bag should be displayed here | As expected | Pass |
 | Click down arrow for Quantity | Quantity will decrease only if it's greater than 1 | As expected | Pass |
 | Click up arrow for Quantity | Quantity will increase only if it's lower than 99 | As expected | Pass |
@@ -238,6 +245,7 @@ ___
 ### Checkout
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Navigate here from the Shopping bag | Products from the Shopping bag should be displayed on the right hand side | As expected | Pass |
 | Submit checkout form without required fields | Order is not submitted | As expected | Pass |
 | Enter incorrect card details | Error message is shown | As expected | Pass |
@@ -249,6 +257,7 @@ ___
 ### Contact Us
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Try submit form without required fields | Form is not submitted and User is directed to missing form field | As expected | Pass |
 | Enter email without incorrect format | Form is not submitted and User is advised of the error | As expected | Pass |
 | Submit form with the required information | Redirected to Home and Success message displayed to user | As expected | Pass |
@@ -256,6 +265,7 @@ ___
 ### My Profile
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Enter delivery information and click update information | Success message displays and information is saved | As expected | Pass |
 | Click previous order number | Previous Order confirmation page is displayed | As expected | Pass |
 | Manually enter profile page URL while not logged in | Redirected to the sign in page | As expected | Pass |
@@ -263,6 +273,7 @@ ___
 ### Product Management Page
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Click Category dropdown menu | Ensure all categories are displayed | As expected | Pass |
 | Try submit form without required fields | Form is not submitted and User is directed to missing form field | As expected | Pass |
 | Try submit form without image selected | Product is created and default image is displayed | As expected | Pass |
@@ -272,6 +283,7 @@ ___
 ### Account Pages (Login / Register / Logout)
 
 | Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Enter incorrect login details | Error message is displayed | As expected | Pass |
 | Enter Correct login details | Opens Home page and success message is displayed | As expected | Pass |
 | Click sign out button | User is signed out and taken to the Home page. Message is displayed informing of the sign out | As expected | Pass |
@@ -280,6 +292,8 @@ ___
 
 ### Error Pages
 
+| Functionality | Expected Outcome | Actual Outcome | Pass/Fail |
+| ------------- |:----------------:| :--------------: | ---------: |
 | Submit the form with required fields | Product is created | As expected | Pass |
 | Enter random url | Custom 404 Error page is displayed | As expected | Pass |
 | Simulate server error | Custom 500 Error page is displayed | As expected | Pass |

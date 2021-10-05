@@ -5,6 +5,7 @@
     <div class="overlay"></div>
     <div class="container-fluid bg-white">
         <div class="row justify-content-center">
+            <!-- Title -->
             <div class="col-12 col-md-6 text-center">
                 <hr>
                 <h1 class="logo-font mb-4">Product Management</h1>
@@ -17,6 +18,7 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
+                    <!-- All form fields except the image field are crispy fields -->
                     {% for field in form %}
                         {% if field.name != 'image' %}
                             {{ field | as_crispy_field }}
@@ -25,7 +27,9 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-right mb-5">
+                        <!-- Cancel changes -->
                         <a class="btn border-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <!-- Update product with changes -->
                         <button class="btn btn-orange border-black rounded-0" type="submit">Update Product</button>
                     </div>
                 </form>
@@ -37,6 +41,7 @@
 {% block postloadjs %}
     {{ block.super }}
     <script>
+        // Changes to Product image
         $('#new-image').change(function() {
             var file = $('#new-image')[0].files[0];
             $('#filename').text(`Image will be set to: ${file.name}`);

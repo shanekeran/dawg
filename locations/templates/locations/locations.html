@@ -5,6 +5,7 @@
     <div class="overlay"></div>
     <div class="container-fluid bg-white">
         <div class="row justify-content-center">
+            <!-- Title -->
             <div class="col-12 col-md-6 text-center">
                 <hr>
                 <h1 class="logo-font mb-4">Store Locations</h1>
@@ -13,17 +14,21 @@
             </div>
         </div>
         <div class="row">
+            <!-- Displays each location from the database -->
             {% for location in locations %}
                 <div class="col-12 py-2">
+                    <!-- Aligns locations to the left or to the right of the page-->
                     {% if forloop.counter|divisibleby:2 %}
                     <div class="card flex-row h-100 py-5 border-0 justify-content-start">
                     {% else %}
                     <div class="card flex-row-reverse h-100 py-5 border-0 justify-content-start">
                     {% endif %}
+                        <!-- Dog kennel image -->
                         <div class="col-2 col-sm-4 col-md-2 my-auto text-center" aria-hidden="true">
                             <i class="d-sm-none fas fa-store-alt"></i>
                             <img src="{{ MEDIA_URL }}dawg-kennel.png" alt="Dog kennel icon" class="img-fluid d-none d-sm-block">
                         </div>
+                        <!-- Store location information-->
                         <div class="col-9 col-sm-7 col-md-6">
                             <div class="row city justify-content-center">{{ location.city }}</div>
                             <div class="location-info">

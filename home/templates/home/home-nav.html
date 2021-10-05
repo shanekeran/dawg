@@ -1,12 +1,15 @@
-<!-- Top navigation bar -->
+<!-- Home navigation bar -->
 <div id="topnav" class="row pt-lg-2 d-lg-flex">
+    <!-- Dawg text logo-->
     <div class="col-6 my-auto py-1 py-lg-0 text-center text-lg-left">
       <a href="{% url 'home' %}" class="nav-link main-logo-link">
         <h2 class="logo-font hvr-skew-forward my-0">Dawg</h2>
       </a>
     </div>
+    <!-- Right side options: Account, About and Bag-->
     <div class="col-6 my-auto py-1 py-lg-0 px-1 px-sm-3">
       <ul class="list-inline list-unstyled text-right my-0">
+          <!-- Account menu -->
           <li class="list-inline-item dropdown">
               <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
@@ -15,18 +18,22 @@
                   </div>
               </a>
               <div class="dropdown-menu border-black" aria-labelledby="user-options">
+                  <!-- Dropdown menu options for logged in Users-->
                   {% if request.user.is_authenticated %}
+                      <!-- Product management page only available for superusers-->
                       {% if request.user.is_superuser %}
                           <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                       {% endif %}
                       <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                       <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                  <!-- Dropdown menu options for non-logged in users-->
                   {% else %}
                       <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                       <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                   {% endif %}
               </div>
           </li>
+          <!-- About menu-->
           <li class="list-inline-item dropdown">
             <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
@@ -35,15 +42,18 @@
                     <p class="my-0 d-none d-sm-block">About</p>
                 </div>
             </a>
+            <!-- Dropdown menu -->
             <div class="dropdown-menu border-black">
                 <a href="{% url 'locations' %}" class="dropdown-item">Locations</a>
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
             </div>
           </li>
+          <!-- Shopping bag -->
           <li class="list-inline-item">
               <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                   <div class="text-center">
                       <div><i class="fas fa-shopping-cart fa-2x"></i></div>
+                      <!-- Current total of items in the bag -->
                       <p class="my-0 d-none d-sm-block">
                           {% if grand_total %}
                               €{{ grand_total|floatformat:2 }}

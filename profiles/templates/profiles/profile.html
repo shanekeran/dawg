@@ -9,21 +9,25 @@
     <div class="overlay"></div>
     <div class="container bg-white">
         <div class="row">
-            <div class="col">
+            <!-- Title -->
+            <div class="col text-center">
                 <hr>
                 <h1 class="logo-font mb-4">My Profile</h1>
                 <hr>
             </div>
         </div>
         <div class="row">
+            <!-- Delivery Information form-->
             <div class="col-12 col-lg-6 mb-5">
                 <p class="text-muted">Default Delivery Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
+                    <!-- Update delivery information -->
                     <button class="btn btn-orange border-black rounded-0 float-right">Update Information</button>
                 </form>
             </div>
+            <!-- Order History table -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Order History</p>
                 <div class="order-history table-responsive">
@@ -37,6 +41,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- Displays each previous order -->
                             {% for order in orders %}
                                 <tr>
                                     <td>

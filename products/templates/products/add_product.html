@@ -5,6 +5,7 @@
     <div class="overlay"></div>
     <div class="container-fluid bg-white">
         <div class="row justify-content-center">
+            <!-- Title -->
             <div class="col-12 col-md-6 text-center">
                 <hr>
                 <h1 class="logo-font mb-4">Product Management</h1>
@@ -15,11 +16,14 @@
 
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
+                <!-- Product form -->
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-5" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right mb-5">
+                        <!-- Cancel changes -->
                         <a class="btn border-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <!-- Add new product -->
                         <button class="btn btn-orange border-black rounded-0" type="submit">Add Product</button>
                     </div>
                 </form>

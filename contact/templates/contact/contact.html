@@ -5,6 +5,7 @@
     <div class="overlay"></div>
     <div class="container-fluid contact-form-container bg-white">
         <div class="row justify-content-center">
+            <!-- Title -->
             <div class="col-12 col-md-6 text-center">
                 <hr>
                 <h1 class="logo-font mb-4">Contact Us</h1>
@@ -13,6 +14,7 @@
             </div>
         </div>
         <div class="row justify-content-center">
+            <!-- Contact form -->
             <form action="{% url 'contact' %}" method="POST" class="col-10 col-md-6 col-xl-4 contact-form" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{form|crispy}}

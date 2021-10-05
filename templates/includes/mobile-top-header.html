@@ -10,13 +10,15 @@
       <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" id="mobile-search-bar" aria-labelledby="mobile-search">
           <form class="form" method="GET" action="{% url 'products' %}">
               <div class="input-group w-100">
+                  <!-- Search bar-->
                   <label for="search-mobile" class="sr-only">Search bar</label>
                   <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="What's up dawg?" id="search-mobile">
+                  <!-- Submit search query-->
                   <div class="input-group-append">
                       <button class="form-control form-control btn border border-black rounded-0" type="submit">
                           <span class="icon">
                               <i class="fas fa-search"></i>
-                              <span class="visually-hidden">Search</span>
+                              <span class="sr-only">Search</span>
                           </span>
                       </button>
                   </div>
@@ -37,12 +39,15 @@
           </div>
       </a>
       <div class="dropdown-menu border-black" aria-labelledby="user-options-mobile">
+          <!-- Dropdown menu options for logged in Users-->
           {% if request.user.is_authenticated %}
+              <!-- Product management page only available for superusers-->
               {% if request.user.is_superuser %}
                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
               {% endif %}
               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+          <!-- Dropdown menu options for non-logged in users-->
           {% else %}
               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
               <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>

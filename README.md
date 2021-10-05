@@ -136,7 +136,7 @@ During local development, I used Django's default SQLite3 database. The deployed
 
 ### **Database schema**
 
-![Dawg database](./readme_images/database.PNG)
+![Dawg database](./readme_images/database-schema.PNG)
 
 
 <span id="tech"></span>
@@ -334,7 +334,7 @@ ___
 - Trixie
 
     + Trixie granted me permission to use their product images from trixie.de, otherwise I would have had a very empty store to showcase. All images not refrenced below were sourced from their website. <details><summary>Click here to view the email granting permission.</summary>
-    <img src="./readme_images/permission.PNG" width="701px" height="260px"></details>
+    <img src="./readme_images/permission.PNG" width="701px" height="260px" alt="permission granted by trixie"></details>
 
 
 - Pixabay

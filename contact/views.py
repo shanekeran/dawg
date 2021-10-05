@@ -17,7 +17,7 @@ def contact_form(request):
         else:
             # If form isn't valid, display error message.
             messages.error(request,
-                            'Error. Review your submission and try again.')
+                           'Error. Review your submission and try again.')
     else:
         form = ContactUs()
 

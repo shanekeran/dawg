@@ -1,10 +1,17 @@
 # Dawg: Testing
 <span id="top"></span>
 
+## Table of Contents
+>1. [Testing User Stories](#user)
+>2. [Issues and Bugs](#bugs)
+>3. [Manual Testing](#manual)
+>4. [Automated Testing](#automated)
+
+<span id="user"></span>
 ## Testing the User Stories
 ___
 
-### Site User
+### Site User - PASS
 
 
 <details><summary>Clearly understand the purpose of the site upon entering for the first time.</summary>
@@ -48,7 +55,7 @@ When a first time user lands on the home page, they'll see the main dawg logo an
 </details>
 <br>
 
-### Site Owner
+### Site Owner - PASS
 
 <details><summary>Give site admins a straightforward process for adding or updating products on the site.</summary>
 
@@ -79,6 +86,9 @@ When a User is logged in:
 </details>
 <br>
 
+<a href="#top">Back to top.</a>
+
+<span id="bugs"></span>
 ## Issues and Bugs during development
 ___
 
@@ -133,6 +143,7 @@ Although nearly identical to the 404 page, the 500 page was not displaying the m
 
 <a href="#top">Back to top.</a>
 
+<span id="manual"></span>
 ## Manual Testing
 ___
 
@@ -301,7 +312,9 @@ ___
 | Simulate server error | Custom 500 Error page is displayed | As expected | Pass |
 | Click buttons to return to store | Opens Home page | As expected | Pass |
 
+<a href="#top">Back to top.</a>
 
+<span id="automated"></span>
 ## Validation
 ___
 

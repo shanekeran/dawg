@@ -226,7 +226,9 @@ ___
 | Click plus button | Quantity will increase only if it's lower than 99 | As expected | Pass |
 | Clicking on the product tag | Opens product page filtering for that product tag | As expected | Pass |
 | As a superuser, click on edit | Opens Product management editor | As expected | Pass |
-| As a superuser, click on delete | Deletes product | As expected | Pass |
+| As a superuser, click on delete | Opens modal | As expected | Pass |
+| Select cancel option on modal | Closes modal | As expected | Pass |
+| Select delete option on modal | Deletes product | As expected | Pass |
 
 ### Shopping bag
 

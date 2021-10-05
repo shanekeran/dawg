@@ -59,7 +59,7 @@ Features to be included on the website are:
 - Clicking on any product image will open up a product detail page containing more information on the selected product.
 - On screen sizes with a width of 577px+, Directly below the shopping cart icon will have the current total price of items added.
 - Orders equal or greater than €30 won't have a delivery charge applied. When an item is added to the shopping bag, the user will be told how much more they need to spend to qualify for free delivery.
-- CRUD functionality. Superusers can access the the Product management page to add products. They can also edit/delete products from the product page. Superusers can also use the Django admin panel to view customer submissions from the contact form and add new store locations to the locations page.
+- CRUD functionality. Superusers can access the the Product management page to add products. They can also edit/delete products from the product page. Superusers can also use the Django admin panel to view customer submissions from the contact form and add new store locations to the locations page. Defensive programming was utilised on the product detail page to trigger a modal before allowing the user to delete the product.
 - Message success/alert/error/warning toasts to give user feedback based on actions taken e.g. product successfully added to shopping bag or order confirmed.
 
 Features to be introduced at a later date:

@@ -421,6 +421,12 @@ color: #fff!important;
   border-radius: 0;
 }
 
+/* Add / Edit Product Image Widget */
+
+.widget-image{
+  max-width: 180px;
+}
+
 
 /* -------------------------------- Media Queries */
 

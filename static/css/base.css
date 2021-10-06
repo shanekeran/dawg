@@ -124,6 +124,7 @@ button:focus {
 
 #delivery-banner span {
   font-size: 1.1rem;
+  text-shadow: 0px 0px 4px #00000069; /* Increase colour contrast between text and background */
 }
 
 /* Code source: hover.css by Ian Lunn */

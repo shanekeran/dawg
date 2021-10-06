@@ -141,6 +141,10 @@ When using the plus and minus buttons to increment/decrement product quantities,
 Although nearly identical to the 404 page, the 500 page was not displaying the main image or favicon. The reason for this is because the {{ MEDIA_URL }} was not being passed into the image src. The final url was only appearing with the file name. To rectify this I added the main image into the AWS static folder and also my local static folder. Then I used {% static dawg.png %} to load the main image instead. This worked but since the favicon was being loaded from the base.html I chose not to change the file path for that at the moment. For now the 500 error page will have the default browser favicon so I'll mark this as unresolved.
 <br/>
 
+### ObjectInUse: cannot ALTER TABLE "checkout_order" because it has pending trigger events : ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) Resolved
+Towards the end of my project, I ran into this error message when attempting to migrate within Heroku. The error stems from actions taken to rectify flake8 warnings such as "Avoid using null=True on string-based fields such CharField". I was unable to resolve the error and Code Institute Tutor support reccomended I reset my postgres database and start fresh. This resolved the issue but it's worth noting that there is one migration(0003_auto_20210802_1155) under "account" that is not present on the deployed site. Even following the process of makemigrations --> migrate, this particular migration won't appear. This doesn't seem to have any effect whatsoever on the functionality of the deployed site.
+<br/>
+
 <a href="#top">Back to top.</a>
 
 <span id="manual"></span>
